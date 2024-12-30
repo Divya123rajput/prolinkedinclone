@@ -1,0 +1,109 @@
+.container{
+    padding: 1.3rem;
+    background: rgb(255,253,253);
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.backdropContainer{
+    width: 50vw;
+    height: 30vh;
+    background:url("https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 20px;
+}
+
+.backdropContainer img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30%;
+    left: 8%;
+    text-align: center;
+    
+}
+
+.profileContainer_details{
+    padding-top: 6.6rem;
+}
+
+
+.card{
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+
+.card_profileContainer{
+    display: flex;
+}
+
+
+.card_profileContainer>img {
+    width: 3.4rem;
+    height: auto;
+    height: 3.4rem;
+    object-fit: cover;
+
+}
+
+.profileContainer_flex{
+    display:flex; 
+    gap:0.7rem;
+}
+
+
+
+.connectBtn{
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    background: rgb(3,93,183,0.905);
+    outline: none;
+    border:none;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.connectedButton{
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    border: 1px solid   rgb(3,93,183,0.905);
+    outline: none;
+    color: rgb(3,93,183,0.905); 
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.workhistoryContainer{
+    display: flex;
+    gap: 1.4rem;
+    padding-top: 1.4rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.workhistoryCard{
+    min-width: fit-content;
+    padding-inline: 2.5rem;
+    padding-block: 1rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(173,173,173);
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+    .profileContainer_flex{
+        flex-direction: column;
+    }
+    
+}
+

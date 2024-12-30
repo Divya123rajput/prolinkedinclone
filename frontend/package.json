@@ -1,0 +1,25 @@
+{
+  "name": "linkden",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
+    "axios": "^1.7.7",
+    "multer": "^1.4.5-lts.1",
+    "next": "14.2.14",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-redux": "^9.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.14"
+  }
+}

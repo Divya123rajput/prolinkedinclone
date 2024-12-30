@@ -1,0 +1,130 @@
+POST http://localhost:9080/register HTTP/1.1
+Content-Type: application/json
+
+
+{
+ "username":"simran",
+  "password":"sim",
+  "email": "sim@gmail.com",
+  "name":"simran"
+  
+}
+
+###
+POST http://localhost:9080/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "sim@gmail.com",
+  "password":"sim"
+}
+
+
+
+
+
+
+###
+GET  http://localhost:9080/posts HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "mitali@gmail.com",
+  "password":"mitali"
+}
+
+###
+POST http://localhost:9080/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "Raj@gmail.com",
+  "password":"Raj"
+}
+
+###
+
+POST   http://localhost:9080/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+
+{
+  "token":"828e0b44dcde441831f2369a2145af9ef99346d9e3376fe22ffdd9719596db05",
+  "bio" :"hii everyone",
+   "currentPost": "CTO",
+   "pastWork":[{
+    "company":"google",
+    "position":"cto",
+    "years":"5"
+
+   }],
+   "education":[{
+
+"school":"ssgi",
+"degree":"btech",
+"fieldOfStudy":"cse"
+   }]
+}
+
+###
+
+
+GET   http://localhost:9080/get_user_and_profile HTTP/1.1
+
+Content-Type: application/json
+{
+ "token":"b6b150161c12fe943b370d6fed1f8bb06e81b4584697d5d73fef7628a7ffaf0f"
+}
+
+
+###
+
+GET   http://localhost:9080/get_user_and_profile HTTP/1.1
+
+Content-Type: application/json
+{
+  "token": "fce6b926b2dc33d60ddab5a51fcbb9dd3acf21b53959eb97d622f870d8fe01ac"
+}
+
+
+
+###
+POST http://localhost:9080/user_update HTTP/1.1
+Content-Type: application/json
+
+
+
+  {
+  "token": "fce6b926b2dc33d60ddab5a51fcbb9dd3acf21b53959eb97d622f870d8fe01ac",
+
+"name":"divya raj"
+}
+
+
+###
+GET http://localhost:9080/user/getConnectionRequests HTTP/1.1
+Content-Type: application/json
+
+{
+"token":"b85d421d050f072d1249e56fa4e2c011cffbd58b9dd434f6b994b5f56ffde062"
+}
+
+
+###
+POST  http://localhost:9080/user/send_connection_request HTTP/1.1
+Content-Type: application/json
+
+{
+"token":"828e0b44dcde441831f2369a2145af9ef99346d9e3376fe22ffdd9719596db05",
+"connectionId":"673dacd65c0f8708c92c0d57"
+}
+
+###
+
+GET   http://localhost:9080/user/user_connection_request HTTP/1.1
+
+{
+
+"token":
+"e4e99e3e21aa5adbf5d548e95a964f586efb83c96a256200d10106ee3bda2352"
+}
