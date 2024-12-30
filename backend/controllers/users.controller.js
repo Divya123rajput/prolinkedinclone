@@ -1,6 +1,6 @@
  import User from "../models/user.model.js";
 import Profile from "../models/profile.model.js"
-import bcrypt from 'bcrypt';
+import bcryptjs from 'bcryptjs';
 import crypto from 'crypto';
 import PDFDocument from 'pdfkit';
 import fs from 'fs';
@@ -104,25 +104,6 @@ export const login = async(req,res)=>{
 }
 
 
-/*export const uploadProfilePicture = async(req,res)=>{
-
-    const  {token} = req.body;
-
-    try{
-        const user = await User.findOne({token:token})
-
-       if (!user) {return res.status(404).json({message:"user does not exist"})}
-       console.log(req.file.filename)
-       user.profilePicture = req.file.filename;
-
-     await  user.save();
-     return res.json({message:"profile picture uploaded successfully"})
-
-    }
-    catch(error){
-        return  res.status(500).json({message: error.message})
-    }
-}*/
 
 export const updateProfilePicture = async (req, res) => {
     const { token } = req.body;
