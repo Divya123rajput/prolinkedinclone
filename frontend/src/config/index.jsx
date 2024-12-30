@@ -2,7 +2,7 @@ const {default: axios} = require("axios")
 
 
 
-export const  base_URL = "http://localhost:9080"
+export const  base_URL = "https://prolinkedinclone-2.onrender.com"
 
 
 

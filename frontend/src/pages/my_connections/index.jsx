@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import styles from './index.module.css' 
 
 
-export default function myconnectionsPage() {
+export default function MyconnectionsPage() {
   const dispatch = useDispatch();
   const authState = useSelector((state)=>state.auth)
 

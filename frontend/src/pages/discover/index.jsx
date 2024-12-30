@@ -8,7 +8,7 @@ import styles from "./index.module.css"
 import { useRouter } from 'next/router'
 
 
-export default function discoverpage() {
+export default function Discoverpage() {
   const authState = useSelector((state)=> state.auth)
   const router = useRouter()
 

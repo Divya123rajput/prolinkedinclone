@@ -1,6 +1,5 @@
 import UserLayout from '@/layouts/UserLayout'
 import React, { useEffect, useState } from 'react'
-import { Navbar } from 'react-bootstrap'
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from 'react-redux'
 import styles from "./style.module.css";
@@ -8,7 +7,7 @@ import { loginUser, registerUser } from '@/config/redux/action/authAction';
 import { emptyMessage } from '@/config/redux/reducer/authReducer';
 
 
-export default function loginComponent() {
+export default function LoginComponent() {
     const authState = useSelector((state) => state.auth)
 
     const router = useRouter();
