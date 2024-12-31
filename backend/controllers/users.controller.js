@@ -48,7 +48,7 @@ const convertUserDataTOPDF = async(userData)=>{
         });
         if(user) return res.status(400).json({message:"user already exist"})
 
-        const hashedPassword = await bcrypt.hash(password, 10)
+        const hashedPassword = await bcryptjs.hash(password, 10)
 
         const newUser = new User({
             name,
@@ -89,7 +89,7 @@ export const login = async(req,res)=>{
         });
         if(!user) return res.status(404).json({message:"user does not exist"})
 
-        const  isMatch = await bcrypt.compare(password, user.password)
+        const  isMatch = await bcryptjs.compare(password, user.password)
         if(!isMatch) return res.status(400).json({message:"invalid credentials "})
         
 
