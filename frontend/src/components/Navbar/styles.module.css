@@ -1,25 +1,25 @@
-.container{
-    padding:1.2rem,
+.container {
+    padding: 1.2rem,
 }
 
-.navbarOptionContainer{
+.navbarOptionContainer {
     display: flex;
 }
 
-.navBar{
+.navBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.buttonJoin{
-    width:fit-content;
+.buttonJoin {
+    width: fit-content;
     cursor: pointer;
     user-select: none;
-    transition:all 0.2s;
+    transition: all 0.2s;
     margin-top: 0.8rem;
     font-size: 1rem;
-   background-color: #cd8987;
+    background-color: #cd8987;
     color: white;
     padding-inline: 1.2rem;
     padding-block: 0.6rem;

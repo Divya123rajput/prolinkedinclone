@@ -12,6 +12,8 @@ export default function LoginComponent() {
 
     const router = useRouter();
     const dispath = useDispatch();
+    const { message, isSuccess } = authState;
+
 
 
     const [userLoginMethod, setUserLoginMethod] = useState(false);
@@ -20,6 +22,12 @@ export default function LoginComponent() {
     const [password, setPassword] = useState();
     const [username, setUsername] = useState();
     const [name, setName] = useState();
+
+    const messageStyle = {
+
+        color: isSuccess ? 'green' : 'red', // Green for success, red for error
+
+    };
 
 
 
@@ -63,7 +71,36 @@ export default function LoginComponent() {
                     <div className={styles.cardContainer_left}>
 
                         <p className={styles.cardleft_heading}>{userLoginMethod ? "Sign In" : "Sign Up"}</p>
-                        <p style={{ color: authState.isError ? "red" : " green" }}> {authState.message}</p>
+
+
+
+
+                        <p style={messageStyle}>
+
+                            {typeof message === 'string' && message}
+
+                            {Array.isArray(message) && message.length > 0 && (
+
+                                <span>{message.join(', ')}</span>
+
+                            )}
+
+                            {message && typeof message === 'object' && !Array.isArray(message) && (
+
+                                <span>
+
+                                    {Object.entries(message).map(([key, value]) => (
+
+                                        <div key={key}>{key}: {value}</div>
+
+                                    ))}
+
+                                </span>
+
+                            )}
+
+
+                        </p>
 
                         <div className={styles.inputContainers}>
 
